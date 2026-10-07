@@ -47,7 +47,7 @@ lanzamiento de la misión.
 <h2>📂 Archivos principales</h2>
 
 <ul>
-    <li><code>avance1/ejercicio1_recursos.py</code></li>
+    <li><code>avance1/Avance1/ejercicio1Proyecto.py</code></li>
     <li><code>avance1/ejercicio2_combustible.py</code></li>
     <li><code>avance1/ejercicio3_soporte_tripulacion.py</code></li>
     <li><code>avance1/ejercicio4_autorizacion.py</code></li>
