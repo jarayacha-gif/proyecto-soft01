@@ -1,13 +1,14 @@
 """ ============================================================
- Archivo: ejercicio1_recursos.py
+ Archivo: ejercicio1_proyecto.py
  Curso: SOFT-01 Principios de Programación 1 - Sección SCV3
  Integrante: Jehidam Araya Chaves
  Fecha: 29/09/2026
- Versión: 1.0
+ Versión: 1.1
  Descripción: Calcula los recursos necesarios para una misión.
 ============================================================"""
 
 # Declaración de constantes
+TRAYECTO_VUELTA = 2
 RESERVA_COMBUSTIBLE = 10
 CONSUMO_COMBUSTIBLE_DIA = 8
 CONSUMO_OXIGENO_TRIPULANTE_DIA = 2
@@ -29,9 +30,9 @@ combustibleRegreso = diasViaje * CONSUMO_COMBUSTIBLE_DIA
 combustibleTotal = combustibleIda + combustibleRegreso + RESERVA_COMBUSTIBLE
 
 # Se calculan los recursos necesarios para la tripulación y la misión.
-oxigenoRequerido = ( diasViaje * cantidadTripulantes * CONSUMO_OXIGENO_TRIPULANTE_DIA + RESERVA_OXIGENO)
-energiaRequerida = diasViaje * CONSUMO_ENERGIA_DIA + RESERVA_ENERGIA
-provisionesRequeridas = (diasViaje * cantidadTripulantes * CONSUMO_PROVISION_TRIPULANTE_DIA + RESERVA_PROVISIONES)
+oxigenoRequerido = ( (diasViaje * TRAYECTO_VUELTA ) * cantidadTripulantes * CONSUMO_OXIGENO_TRIPULANTE_DIA + RESERVA_OXIGENO) 
+energiaRequerida = (diasViaje * TRAYECTO_VUELTA ) * CONSUMO_ENERGIA_DIA + RESERVA_ENERGIA
+provisionesRequeridas = (diasViaje * TRAYECTO_VUELTA )* cantidadTripulantes * CONSUMO_PROVISION_TRIPULANTE_DIA + RESERVA_PROVISIONES
 
 # Salida de resultados
 print(f"""
