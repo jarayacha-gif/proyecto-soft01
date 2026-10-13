@@ -1,55 +1,67 @@
-<h1 align="center">🚀 Proyecto de Principios de Programación</h1>
+# Misión Órbita — Avance 1
 
-<h2>📋 Información del proyecto</h2>
+## Información del proyecto
 
-<ul>
-    <li><strong>Proyecto:</strong> Misión Órbita</li>
-    <li><strong>Curso:</strong> Principios de Programación 1</li>
-    <li><strong>Código:</strong> SOFT-01</li>
-    <li><strong>Sección:</strong> SCV3</li>
-    <li><strong>Estudiante:</strong> Jehidam Araya Chaves</li>
-    <li><strong>Docente:</strong> Verónica Mora Lezcano</li>
-</ul>
+- **Curso:** Principios de Programación 1
+- **Código:** SOFT-01
+- **Sección:** SCV3
+- **Estudiante:** Jehidam Araya Chaves
+- **Docente:** Verónica Mora Lezcano
 
-<h2>📁 Contenido del repositorio</h2>
+## Descripción
 
-<ul>
-    <li><strong>README.md</strong> — Información general del proyecto.</li>
-    <li><strong>avance1/</strong> — Contiene los programas desarrollados para el primer avance.</li>
-    <li><strong>documentacion/</strong> — Contiene la documentación del proyecto en PDF.</li>
-</ul>
+Este repositorio contiene el primer avance del proyecto **Misión Órbita**, desarrollado en Python. Incluye cuatro programas independientes para calcular los recursos necesarios para una misión, verificar el combustible y el soporte de la tripulación, y evaluar la autorización inicial del lanzamiento.
 
-<h2>💻 Ejercicios</h2>
+## Estructura del repositorio
 
-<h3>Ejercicio 1 — Cálculo de recursos</h3>
-<p>
-Calcula los recursos necesarios para una misión, incluyendo combustible,
-oxígeno, energía y provisiones.
-</p>
+```text
+proyecto-soft01/
+├── README.md
+├── Avance1/
+│   ├── ejercicio1Proyecto.py
+│   ├── ejercicio2Proyecto.py
+│   ├── ejercicio3Proyecto.py
+│   └── ejercicio4Proyecto.py
+└── Documentacion/
+    └── Documentacion Proyecto _ Avance 1 .pdf
+```
 
-<h3>Ejercicio 2 — Verificación de combustible</h3>
-<p>
-Verifica si existe suficiente combustible para realizar el viaje de ida,
-regreso y mantener la reserva.
-</p>
+## Ejercicios
 
-<h3>Ejercicio 3 — Soporte para la tripulación</h3>
-<p>
-Comprueba si hay suficiente oxígeno y provisiones para la tripulación.
-</p>
+1. **Cálculo de recursos necesarios para una misión:** calcula el combustible para ida y regreso, la reserva, el oxígeno, la energía y las provisiones.
+2. **Verificación de combustible:** calcula el combustible total requerido y el combustible adicional disponible; muestra una advertencia cuando el adicional es menor que 10 unidades.
+3. **Verificación del soporte para la tripulación:** comprueba si el oxígeno y las provisiones disponibles son suficientes.
+4. **Autorización inicial de lanzamiento:** autoriza el lanzamiento únicamente si el combustible, el oxígeno, la energía y las provisiones cumplen con los requisitos.
 
-<h3>Ejercicio 4 — Autorización inicial de lanzamiento</h3>
-<p>
-Determina si se cumplen las condiciones necesarias para autorizar el
-lanzamiento de la misión.
-</p>
+## Requisitos
 
-<h2>📂 Archivos principales</h2>
+- Python 3 instalado.
+- Visual Studio Code recomendado como editor.
 
-<ul>
-    <li><code>avance1/Avance1/ejercicio1Proyecto.py</code></li>
-    <li><code>avance1/ejercicio2_combustible.py</code></li>
-    <li><code>avance1/ejercicio3_soporte_tripulacion.py</code></li>
-    <li><code>avance1/ejercicio4_autorizacion.py</code></li>
-    <li><code>documentacion/avance1.pdf</code></li>
-</ul>
+## Cómo ejecutar los programas
+
+Abre una terminal en la carpeta raíz del repositorio y ejecuta el programa que deseas probar:
+
+```bash
+python Avance1/ejercicio1Proyecto.py
+python Avance1/ejercicio2Proyecto.py
+python Avance1/ejercicio3Proyecto.py
+python Avance1/ejercicio4Proyecto.py
+```
+
+En Windows también puedes utilizar `py` en lugar de `python`. Cada programa se ejecuta de forma independiente y solicita los datos por consola.
+
+## Convenciones y estilo de código
+
+- Variables con nombres descriptivos, usando camelCase cuando corresponde al código existente.
+- Constantes escritas en MAYÚSCULAS con guion bajo.
+- Indentación de cuatro espacios.
+- Comentarios para identificar las secciones principales del programa.
+- Entradas y salidas mediante consola.
+- Sin librerías externas.
+
+## Documentación
+
+El PDF del avance contiene las tablas de variables, los diagramas de flujo, el código y las tablas de casos de prueba con evidencia de ejecución.
+
+[Consultar la documentación del Avance 1](Documentacion/Documentacion%20Proyecto%20_%20Avance%201%20.pdf)
