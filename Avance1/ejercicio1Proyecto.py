@@ -1,5 +1,5 @@
 """ ============================================================
- Archivo: ejercicio1_proyecto.py
+ Archivo: ejercicio1Proyecto.py
  Curso: SOFT-01 Principios de Programación 1 - Sección SCV3
  Integrante: Jehidam Araya Chaves
  Fecha: 29/09/2026
