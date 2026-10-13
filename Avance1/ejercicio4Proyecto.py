@@ -1,5 +1,5 @@
 """ ============================================================
-Archivo: ejercicio4_autorizacion.py
+Archivo: ejercicio4Proyecto.py
 Curso: SOFT-01 Principios de Programación 1 - Sección SCV3
 Integrante: Jehidam Araya Chaves
 Fecha: 29/09/2026
@@ -16,7 +16,7 @@ combustibleDisponible = int(input("Ingrese la cantidad de combustible disponible
 combustibleIda = int(input("Ingrese la cantidad de combustible necesario para el viaje de ida: "))
 combustibleRegreso = int(input("Ingrese la cantidad de combustible necesario para el viaje de regreso: "))
 oxigenoDisponible = int(input("Ingrese la cantidad de oxígeno disponible en la nave: "))
-oxigenoNecesario = int(input("Ingrese la cantidad de oxígeno reque0rido para el viaje: "))
+oxigenoNecesario = int(input("Ingrese la cantidad de oxígeno requerido para el viaje: "))
 energiaDisponible = int(input("Ingrese la cantidad de energía disponible en la nave: "))
 energiaNecesaria = int(input("Ingrese la cantidad de energía requerida para el viaje: "))
 provisionesDisponibles = int(input("Ingrese la cantidad de provisiones disponibles en la nave: "))
