@@ -1,5 +1,5 @@
 """ ============================================================
-Archivo: ejercicio2_combustible.py
+Archivo: ejercicio2Proyecto.py
 Curso: SOFT-01 Principios de Programación 1 - Sección SCV3
 Integrante: Jehidam Araya Chaves
 Fecha: 29/09/2026
