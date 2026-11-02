@@ -19,7 +19,7 @@ En esta versión se incorporan **actualizaciones correspondientes al segundo ava
 proyecto-soft01/
 ├── README.md
 ├── .gitignore
-├── src/
+├── codigo de ejercicios/
 │   ├── avance_1/
 │   │   ├── ejercicio1Proyecto.py
 │   │   ├── ejercicio2Proyecto.py
@@ -27,15 +27,15 @@ proyecto-soft01/
 │   │   └── ejercicio4Proyecto.py
 │   └── avance_2/
 │       └── ejercicio7_exploracion.py
-└── docs/
+└── documentacion del proyecto/
     ├── avance_1/
     │   └── documentacion_proyecto_avance_1.pdf
     └── avance_2/
         └── ejercicio7_avance_2.pdf
 ```
 
-- **`src/`** contiene los programas de Python, separados por avance.
-- **`docs/`** reúne los documentos PDF de cada avance.
+- **`codigo de ejercicios/`** contiene los programas de Python, separados por avance.
+- **`documentacion del proyecto/`** reúne los documentos PDF de cada avance.
 - **`.gitignore`** excluye archivos temporales y entornos virtuales que no deben formar parte del repositorio.
 
 ## Avance 1: planificación y verificación de la misión
@@ -49,7 +49,7 @@ Los primeros cuatro ejercicios permiten calcular los recursos necesarios y compr
 
 ## Actualizaciones del segundo avance: exploración científica
 
-El archivo `src/avance_2/ejercicio7_exploracion.py` incorpora una simulación interactiva de las actividades que puede realizar la tripulación al llegar al destino.
+El archivo `codigo de ejercicios/avance_2/ejercicio7_exploracion.py` incorpora una simulación interactiva de las actividades que puede realizar la tripulación al llegar al destino.
 
 Al iniciar, el programa solicita la energía y las provisiones disponibles. Después presenta un menú con estas actividades:
 
@@ -84,17 +84,17 @@ cd proyecto-soft01
 Ejecuta los programas desde la raíz del repositorio:
 
 ```bash
-python src/avance_1/ejercicio1Proyecto.py
-python src/avance_1/ejercicio2Proyecto.py
-python src/avance_1/ejercicio3Proyecto.py
-python src/avance_1/ejercicio4Proyecto.py
-python src/avance_2/ejercicio7_exploracion.py
+python "codigo de ejercicios/avance_1/ejercicio1Proyecto.py"
+python "codigo de ejercicios/avance_1/ejercicio2Proyecto.py"
+python "codigo de ejercicios/avance_1/ejercicio3Proyecto.py"
+python "codigo de ejercicios/avance_1/ejercicio4Proyecto.py"
+python "codigo de ejercicios/avance_2/ejercicio7_exploracion.py"
 ```
 
 En Windows también puedes utilizar `py` en lugar de `python`. Por ejemplo:
 
 ```bash
-py src/avance_2/ejercicio7_exploracion.py
+py "codigo de ejercicios/avance_2/ejercicio7_exploracion.py"
 ```
 
 Cada ejercicio se ejecuta de forma independiente y solicita la información directamente por consola.
@@ -110,8 +110,8 @@ Cada ejercicio se ejecuta de forma independiente y solicita la información dire
 
 ## Documentación
 
-- [Documentación del Avance 1](docs/avance_1/documentacion_proyecto_avance_1.pdf)
-- [Documentación del segundo avance — Ejercicio 7](docs/avance_2/ejercicio7_avance_2.pdf)
+- [Documentación del Avance 1](documentacion%20del%20proyecto/avance_1/documentacion_proyecto_avance_1.pdf)
+- [Documentación del segundo avance — Ejercicio 7](documentacion%20del%20proyecto/avance_2/ejercicio7_avance_2.pdf)
 
 ## Estado del proyecto
 
