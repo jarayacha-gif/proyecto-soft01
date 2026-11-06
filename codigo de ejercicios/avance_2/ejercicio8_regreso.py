@@ -64,6 +64,7 @@ if combustibleDisponible >= combustibleNecesario:
                     print("Recurso insuficiente: provisiones")
 
                 continuarRegreso = False
+                break
 
     # Resultados del regreso
     if continuarRegreso:
