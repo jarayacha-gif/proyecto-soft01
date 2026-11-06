@@ -45,7 +45,7 @@ while continuarExploracion:
 
 4. Finalizar exploración|   Resultados Obtenidos   |
 
-Seleccione la actividad que desea realizar: (1-4) """))
+Seleccione una actividad: """))
 
     # Decisión: analizar terreno
     if opcion == 1:
