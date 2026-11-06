@@ -112,7 +112,6 @@ Cada ejercicio se ejecuta de forma independiente y solicita la información dire
 
 - [Documentación del Avance 1](documentacion%20del%20proyecto/avance_1/documentacion_proyecto_avance_1.pdf)
 - [Documentación del segundo avance — Ejercicio 7](documentacion%20del%20proyecto/avance_2/ejercicio7_avance_2.pdf)
-
-## Estado del proyecto
+-[Documentación del segundo avance — Ejercicio 8](documentacion%20del%20proyecto/avance_2/ejercicio8_avance_2.pdf)## Estado del proyecto
 
 El repositorio conserva el trabajo del primer avance e incorpora las actualizaciones correspondientes al segundo avance de **Misión Órbita**. Cada ejercicio se encuentra separado para facilitar su consulta y ejecución.
