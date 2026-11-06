@@ -26,45 +26,45 @@ provisionesDisponibles = int(input("Ingrese la cantidad de provisiones disponibl
 combustibleNecesario = viajeIda * CONSUMO_COMBUSTIBLE_DIA
 
 diasCompletados = 0
+dia = 0
 continuarRegreso = True
 
 # Decisión: verificar si existe combustible para regresar
 if combustibleDisponible >= combustibleNecesario:
 
-    # Caso A: simular el regreso
-    for dia in range(viajeIda):
+    # Caso A: simular el regreso mientras queden días y la misión pueda continuar
+    while dia < viajeIda and continuarRegreso:
 
-        if continuarRegreso:
+        # Verificar si todos los recursos alcanzan antes de realizar el consumo
+        if combustibleDisponible >= CONSUMO_COMBUSTIBLE_DIA and oxigenoDisponible >= (tripulantes * CONSUMO_OXIGENO_TRIPULANTE) and energiaDisponible >= CONSUMO_ENERGIA_DIA and provisionesDisponibles >= tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
 
-            # Verificar si todos los recursos alcanzan
-            if combustibleDisponible >= CONSUMO_COMBUSTIBLE_DIA and oxigenoDisponible >= (tripulantes * CONSUMO_OXIGENO_TRIPULANTE) and energiaDisponible >= CONSUMO_ENERGIA_DIA and provisionesDisponibles >= tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
+            # Descontar el consumo diario
+            combustibleDisponible -= CONSUMO_COMBUSTIBLE_DIA
+            oxigenoDisponible -= tripulantes * CONSUMO_OXIGENO_TRIPULANTE
+            energiaDisponible -= CONSUMO_ENERGIA_DIA
+            provisionesDisponibles -= tripulantes * CONSUMO_PROVISIONES_TRIPULANTE
 
-                # Descontar el consumo diario
-                combustibleDisponible -= CONSUMO_COMBUSTIBLE_DIA
-                oxigenoDisponible -= tripulantes * CONSUMO_OXIGENO_TRIPULANTE
-                energiaDisponible -= CONSUMO_ENERGIA_DIA
-                provisionesDisponibles -= tripulantes * CONSUMO_PROVISIONES_TRIPULANTE
+            diasCompletados += 1
+            dia += 1
 
-                diasCompletados += 1
+            print(f"Día {diasCompletados} | Combustible: {combustibleDisponible} | Oxígeno: {oxigenoDisponible} | Energía: {energiaDisponible} | Provisiones: {provisionesDisponibles}")
 
-                print(f"Día {diasCompletados} | Combustible: {combustibleDisponible} | Oxígeno: {oxigenoDisponible} | Energía: {energiaDisponible} | Provisiones: {provisionesDisponibles}")
+        else:
 
-            else:
+            print(f"El regreso se interrumpió en el día {dia + 1}.")
 
-                print(f"El regreso se interrumpió en el día {dia + 1}.")
+            # Identificar todos los recursos insuficientes, en el orden solicitado
+            if oxigenoDisponible < tripulantes * CONSUMO_OXIGENO_TRIPULANTE:
+                print("Recurso insuficiente: oxígeno")
 
-                # Identificar todos los recursos insuficientes
-                if oxigenoDisponible < tripulantes * CONSUMO_OXIGENO_TRIPULANTE:
-                    print("Recurso insuficiente: oxígeno")
+            if energiaDisponible < CONSUMO_ENERGIA_DIA:
+                print("Recurso insuficiente: energía")
 
-                if energiaDisponible < CONSUMO_ENERGIA_DIA:
-                    print("Recurso insuficiente: energía")
+            if provisionesDisponibles < tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
+                print("Recurso insuficiente: provisiones")
 
-                if provisionesDisponibles < tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
-                    print("Recurso insuficiente: provisiones")
-
-                continuarRegreso = False
-                break
+            # Cambiar la variable de control para terminar el ciclo sin break
+            continuarRegreso = False
 
     # Resultados del regreso
     if continuarRegreso:
