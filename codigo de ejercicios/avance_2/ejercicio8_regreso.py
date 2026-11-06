@@ -1,7 +1,7 @@
 #============================================================
 # Archivo: ejercicio8_regreso.py
 # Curso: SOFT-01 Principios de Programación 1 - Sección SCV6
-# Integrante registrado: Jehidam Araya Chaves
+# Integrantes: Jehidam Araya Chaves
 # Fecha: 31/10/2026         Versión: 1.0
 #
 # Descripción: Evalúa el regreso de la tripulación a la Tierra
@@ -26,45 +26,44 @@ provisionesDisponibles = int(input("Ingrese la cantidad de provisiones disponibl
 combustibleNecesario = viajeIda * CONSUMO_COMBUSTIBLE_DIA
 
 diasCompletados = 0
-dia = 0
 continuarRegreso = True
 
 # Decisión: verificar si existe combustible para regresar
 if combustibleDisponible >= combustibleNecesario:
 
-    # Caso A: simular el regreso mientras queden días y la misión pueda continuar
-    while dia < viajeIda and continuarRegreso:
+    # Caso A: simular el regreso
+    for dia in range(viajeIda):
 
-        # Verificar si todos los recursos alcanzan antes de realizar el consumo
-        if combustibleDisponible >= CONSUMO_COMBUSTIBLE_DIA and oxigenoDisponible >= (tripulantes * CONSUMO_OXIGENO_TRIPULANTE) and energiaDisponible >= CONSUMO_ENERGIA_DIA and provisionesDisponibles >= tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
+        if continuarRegreso:
 
-            # Descontar el consumo diario
-            combustibleDisponible -= CONSUMO_COMBUSTIBLE_DIA
-            oxigenoDisponible -= tripulantes * CONSUMO_OXIGENO_TRIPULANTE
-            energiaDisponible -= CONSUMO_ENERGIA_DIA
-            provisionesDisponibles -= tripulantes * CONSUMO_PROVISIONES_TRIPULANTE
+            # Verificar si todos los recursos alcanzan
+            if combustibleDisponible >= CONSUMO_COMBUSTIBLE_DIA and oxigenoDisponible >= (tripulantes * CONSUMO_OXIGENO_TRIPULANTE) and energiaDisponible >= CONSUMO_ENERGIA_DIA and provisionesDisponibles >= tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
 
-            diasCompletados += 1
-            dia += 1
+                # Descontar el consumo diario
+                combustibleDisponible -= CONSUMO_COMBUSTIBLE_DIA
+                oxigenoDisponible -= tripulantes * CONSUMO_OXIGENO_TRIPULANTE
+                energiaDisponible -= CONSUMO_ENERGIA_DIA
+                provisionesDisponibles -= tripulantes * CONSUMO_PROVISIONES_TRIPULANTE
 
-            print(f"Día {diasCompletados} | Combustible: {combustibleDisponible} | Oxígeno: {oxigenoDisponible} | Energía: {energiaDisponible} | Provisiones: {provisionesDisponibles}")
+                diasCompletados += 1
 
-        else:
+                print(f"Día {diasCompletados} | Combustible: {combustibleDisponible} | Oxígeno: {oxigenoDisponible} | Energía: {energiaDisponible} | Provisiones: {provisionesDisponibles}")
 
-            print(f"El regreso se interrumpió en el día {dia + 1}.")
+            else:
 
-            # Identificar todos los recursos insuficientes, en el orden solicitado
-            if oxigenoDisponible < tripulantes * CONSUMO_OXIGENO_TRIPULANTE:
-                print("Recurso insuficiente: oxígeno")
+                print(f"El regreso se interrumpió en el día {dia + 1}.")
 
-            if energiaDisponible < CONSUMO_ENERGIA_DIA:
-                print("Recurso insuficiente: energía")
+                # Identificar todos los recursos insuficientes
+                if oxigenoDisponible < tripulantes * CONSUMO_OXIGENO_TRIPULANTE:
+                    print("Recurso insuficiente: oxígeno")
 
-            if provisionesDisponibles < tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
-                print("Recurso insuficiente: provisiones")
+                if energiaDisponible < CONSUMO_ENERGIA_DIA:
+                    print("Recurso insuficiente: energía")
 
-            # Actualizar la variable de control para que la condición del ciclo sea falsa
-            continuarRegreso = False
+                if provisionesDisponibles < tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
+                    print("Recurso insuficiente: provisiones")
+
+                continuarRegreso = False
 
     # Resultados del regreso
     if continuarRegreso:
