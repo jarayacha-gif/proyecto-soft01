@@ -1,7 +1,7 @@
 # ============================================================
 # Archivo: ejercicio7_exploracion.py
 # Curso: SOFT-01 Principios de Programación 1 - Sección SCV6
-# Integrantes: Nombre de los integrantes
+# Integrante registrado: Jehidam Araya Chaves
 # Fecha: 31/10/2026         Versión: 1.0
 # ============================================================
 
