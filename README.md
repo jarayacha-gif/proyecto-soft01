@@ -104,7 +104,7 @@ py "codigo de ejercicios/avance_2/ejercicio8_regreso.py"
 
 El proyecto sigue el enfoque imperativo y los contenidos trabajados en el curso:
 
-- Variables descriptivas en `snake_case` o `camelCase`.
+- Variables descriptivas en `camelCase`.
 - Constantes en mayúsculas con guion bajo.
 - Indentación uniforme de cuatro espacios.
 - Entrada y salida mediante `input()` y `print()`.
@@ -114,21 +114,12 @@ El proyecto sigue el enfoque imperativo y los contenidos trabajados en el curso:
 
 ## Documentación académica
 
-- [Documentación del Avance 1](documentacion%20del%20proyecto/avance_1/documentacion_proyecto_avance_1.pdf)
-- [Documentación del Ejercicio 7 — Avance 2](documentacion%20del%20proyecto/avance_2/ejercicio7_avance_2.pdf)
-- [Documentación del Ejercicio 8 — Avance 2](documentacion%20del%20proyecto/avance_2/Ejercicio8_Avance2.pdf)
-
+- [Documentación del Avance 1]
+- [Documentación del Ejercicio 7 — Avance 2]
+- [Documentación del Ejercicio 8 — Avance 2]
 La consigna del segundo avance solicita, para cada ejercicio asignado, tabla de variables, diagrama de flujo, código Python, al menos tres casos de prueba documentados y evidencia de ejecución en consola. Se recomienda revisar esos elementos en cada PDF antes de entregar.
 
 ## Historial de versiones
 
 El desarrollo se registra mediante commits en Git. La consigna solicita al menos ocho commits significativos distribuidos en tres días diferentes, mensajes descriptivos y participación de todos los integrantes. El historial de esta rama muestra actividad progresiva en septiembre, octubre y noviembre de 2026.
 
-## Alcance y estado de entrega
-
-Este README documenta los archivos que actualmente están versionados en la rama `Proyecto`. No declara como completados entregables que todavía no aparecen en el árbol del repositorio. Antes de la entrega final se debe:
-
-1. Incorporar los ejercicios 5 y 6 si el equipo es de tres integrantes.
-2. Confirmar que cada PDF del avance 2 incluya tablas de variables, diagramas completos, código, casos de prueba y capturas legibles.
-3. Sustituir los marcadores de integrantes en los encabezados de los ejercicios 7 y 8 por los nombres reales del equipo.
-4. Indicar esta rama (`Proyecto`) en la portada del PDF que se subirá a Moodle.
