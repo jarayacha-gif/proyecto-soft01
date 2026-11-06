@@ -1,17 +1,47 @@
-# Misión Órbita — Actualizaciones del segundo avance
+# Misión Órbita — Simulador de exploración espacial
 
 ## Información del proyecto
 
+- **Universidad:** CENFOTEC
+- **Escuela:** Ingeniería del Software
 - **Curso:** Principios de Programación 1
 - **Código:** SOFT-01
-- **Estudiante:** Jehidam Araya Chaves
+- **Sección:** SCV6
+- **Periodo:** C3-2026
 - **Docente:** Verónica Mora Lezcano
+- **Integrante registrado:** Jehidam Araya Chaves
+
+> **Rama de revisión:** `Proyecto`. Esta es la rama principal de trabajo del repositorio; no confundir con `main`.
 
 ## Descripción
 
-Este repositorio contiene el desarrollo del proyecto **Misión Órbita**, realizado en Python para el curso Principios de Programación 1.
+**Misión Órbita** es un proyecto académico desarrollado en Python que representa, mediante programas independientes, la planificación y ejecución de una misión de exploración espacial. El simulador calcula recursos, verifica condiciones para el lanzamiento, registra el consumo de recursos durante el viaje, administra actividades científicas y evalúa el regreso o la supervivencia de la tripulación.
 
-En esta versión se incorporan **actualizaciones correspondientes al segundo avance del proyecto**. Se conserva el trabajo inicial de planificación y verificación de recursos de la misión, y se agrega una simulación de exploración científica en la que la tripulación administra sus recursos y realiza distintas actividades.
+Los valores de combustible, oxígeno, energía y provisiones son unidades ficticias establecidas por la consigna del curso. El proyecto se desarrolla progresivamente en entregas separadas.
+
+## Estado de los avances
+
+### Avance 1 — Planificación de la misión
+
+Los programas del primer avance están en `codigo de ejercicios/avance_1/`:
+
+| Archivo | Función |
+| --- | --- |
+| `ejercicio1Proyecto.py` | Calcula combustible para ida y regreso, reserva, oxígeno, energía y provisiones. |
+| `ejercicio2Proyecto.py` | Calcula el combustible total requerido y muestra una advertencia cuando el excedente es bajo. |
+| `ejercicio3Proyecto.py` | Verifica si el oxígeno y las provisiones cubren las necesidades de la tripulación. |
+| `ejercicio4Proyecto.py` | Autoriza o rechaza el lanzamiento según la disponibilidad de los cuatro recursos. |
+
+### Avance 2 — Ejecución de la misión
+
+Los programas disponibles de este avance están en `codigo de ejercicios/avance_2/`:
+
+| Ejercicio | Archivo | Función |
+| --- | --- | --- |
+| 7 | `ejercicio7_exploracion.py` | Presenta un menú de actividades científicas, descuenta energía y provisiones, y acumula actividades, muestras y puntos. |
+| 8 | `ejercicio8_regreso.py` | Evalúa si hay combustible para iniciar el regreso, simula el consumo diario y calcula la supervivencia cuando la tripulación queda varada. |
+
+**Pendiente de incorporar al repositorio:** los ejercicios 5 (selección del destino y autorización) y 6 (simulación del viaje hacia el destino). La consigna asigna los ejercicios 5, 6, 7 y 8 a grupos de tres integrantes; los ejercicios 7 y 8 por sí solos corresponden al alcance individual.
 
 ## Organización del repositorio
 
@@ -26,62 +56,34 @@ proyecto-soft01/
 │   │   ├── ejercicio3Proyecto.py
 │   │   └── ejercicio4Proyecto.py
 │   └── avance_2/
-│       └── ejercicio7_exploracion.py
+│       ├── ejercicio7_exploracion.py
+│       └── ejercicio8_regreso.py
 └── documentacion del proyecto/
     ├── avance_1/
     │   └── documentacion_proyecto_avance_1.pdf
     └── avance_2/
-        └── ejercicio7_avance_2.pdf
+        ├── ejercicio7_avance_2.pdf
+        └── Ejercicio8_Avance2.pdf
 ```
-
-- **`codigo de ejercicios/`** contiene los programas de Python, separados por avance.
-- **`documentacion del proyecto/`** reúne los documentos PDF de cada avance.
-- **`.gitignore`** excluye archivos temporales y entornos virtuales que no deben formar parte del repositorio.
-
-## Avance 1: planificación y verificación de la misión
-
-Los primeros cuatro ejercicios permiten calcular los recursos necesarios y comprobar si la nave cuenta con las condiciones para realizar el viaje.
-
-1. **Cálculo de recursos necesarios:** solicita el nombre de la misión, la cantidad de tripulantes y los días de viaje. Calcula el combustible para ida y regreso, la reserva de combustible, el oxígeno, la energía y las provisiones.
-2. **Verificación de combustible:** compara el combustible disponible con el necesario para la ida, el regreso y la reserva. Muestra una advertencia cuando el excedente es menor que 10 unidades.
-3. **Soporte para la tripulación:** comprueba si el oxígeno y las provisiones disponibles son suficientes para cubrir las necesidades del viaje.
-4. **Autorización de lanzamiento:** evalúa el combustible, el oxígeno, la energía y las provisiones. El lanzamiento se autoriza solamente cuando todos los recursos cumplen con las cantidades requeridas.
-
-## Actualizaciones del segundo avance: exploración científica
-
-El archivo `codigo de ejercicios/avance_2/ejercicio7_exploracion.py` incorpora una simulación interactiva de las actividades que puede realizar la tripulación al llegar al destino.
-
-Al iniciar, el programa solicita la energía y las provisiones disponibles. Después presenta un menú con estas actividades:
-
-| Opción | Actividad | Energía consumida | Provisiones consumidas | Puntos científicos |
-| --- | --- | ---: | ---: | ---: |
-| 1 | Analizar terreno | 8 | 0 | 10 |
-| 2 | Recolectar muestra | 12 | 2 | 20 |
-| 3 | Realizar observación | 5 | 0 | 8 |
-| 4 | Finalizar exploración | 0 | 0 | 0 |
-
-Antes de completar una actividad, el programa verifica que existan recursos suficientes. Cuando la actividad se realiza, actualiza la energía y las provisiones restantes, suma los puntos científicos y registra las actividades realizadas. También lleva el conteo de las muestras recolectadas.
-
-La exploración termina cuando la tripulación selecciona la opción de finalizar o cuando no existen recursos suficientes para completar una actividad. Al final se muestra un resumen con las actividades realizadas, las muestras recolectadas, los puntos científicos y los recursos restantes.
 
 ## Requisitos
 
 - Python 3.
-- Un editor de código, como Visual Studio Code.
-- Terminal o consola para ejecutar los archivos.
+- Visual Studio Code u otro editor de texto.
+- Terminal o consola.
 
-Los ejercicios utilizan funcionalidades incluidas en Python y no requieren instalar librerías externas.
+No se requieren dependencias externas. Los programas se ejecutan individualmente y leen los datos mediante consola.
 
-## Cómo ejecutar los programas
+## Cómo clonar y ejecutar
 
-Clona el repositorio y entra en su carpeta:
+Clonar el repositorio:
 
 ```bash
 git clone https://github.com/jarayacha-gif/proyecto-soft01.git
 cd proyecto-soft01
 ```
 
-Ejecuta los programas desde la raíz del repositorio:
+Ejecutar los programas disponibles desde la carpeta raíz:
 
 ```bash
 python "codigo de ejercicios/avance_1/ejercicio1Proyecto.py"
@@ -89,29 +91,44 @@ python "codigo de ejercicios/avance_1/ejercicio2Proyecto.py"
 python "codigo de ejercicios/avance_1/ejercicio3Proyecto.py"
 python "codigo de ejercicios/avance_1/ejercicio4Proyecto.py"
 python "codigo de ejercicios/avance_2/ejercicio7_exploracion.py"
+python "codigo de ejercicios/avance_2/ejercicio8_regreso.py"
 ```
 
-En Windows también puedes utilizar `py` en lugar de `python`. Por ejemplo:
+En Windows también se puede utilizar `py` en lugar de `python`. Por ejemplo:
 
 ```bash
-py "codigo de ejercicios/avance_2/ejercicio7_exploracion.py"
+py "codigo de ejercicios/avance_2/ejercicio8_regreso.py"
 ```
 
-Cada ejercicio se ejecuta de forma independiente y solicita la información directamente por consola.
+## Convenciones y restricciones de programación
 
-## Conceptos de programación utilizados
+El proyecto sigue el enfoque imperativo y los contenidos trabajados en el curso:
 
-- **Variables y constantes:** almacenamiento de datos de entrada, resultados y valores definidos para los cálculos.
-- **Entradas y salidas:** interacción con el usuario mediante `input()` y `print()`.
-- **Operadores aritméticos:** cálculos de consumo de recursos y puntuaciones.
-- **Estructuras condicionales:** comparación de recursos y toma de decisiones mediante `if`, `elif` y `else`.
-- **Ciclos de repetición:** uso de `while` para mantener activo el menú de exploración.
-- **Contadores y acumuladores:** registro de actividades, muestras recolectadas y puntos científicos.
+- Variables descriptivas en `snake_case` o `camelCase`.
+- Constantes en mayúsculas con guion bajo.
+- Indentación uniforme de cuatro espacios.
+- Entrada y salida mediante `input()` y `print()`.
+- Decisiones con `if`, `elif` y `else`.
+- Ciclos `while` y `for` con `range()`, contadores, acumuladores y variables de control.
+- Sin funciones propias (`def`), colecciones, librerías externas, archivos, JSON ni programación orientada a objetos, según las restricciones del avance.
 
-## Documentación
+## Documentación académica
 
 - [Documentación del Avance 1](documentacion%20del%20proyecto/avance_1/documentacion_proyecto_avance_1.pdf)
-- [Documentación del segundo avance — Ejercicio 7](documentacion%20del%20proyecto/avance_2/ejercicio7_avance_2.pdf)
--[Documentación del segundo avance — Ejercicio 8](documentacion%20del%20proyecto/avance_2/ejercicio8_avance_2.pdf)## Estado del proyecto
+- [Documentación del Ejercicio 7 — Avance 2](documentacion%20del%20proyecto/avance_2/ejercicio7_avance_2.pdf)
+- [Documentación del Ejercicio 8 — Avance 2](documentacion%20del%20proyecto/avance_2/Ejercicio8_Avance2.pdf)
 
-El repositorio conserva el trabajo del primer avance e incorpora las actualizaciones correspondientes al segundo avance de **Misión Órbita**. Cada ejercicio se encuentra separado para facilitar su consulta y ejecución.
+La consigna del segundo avance solicita, para cada ejercicio asignado, tabla de variables, diagrama de flujo, código Python, al menos tres casos de prueba documentados y evidencia de ejecución en consola. Se recomienda revisar esos elementos en cada PDF antes de entregar.
+
+## Historial de versiones
+
+El desarrollo se registra mediante commits en Git. La consigna solicita al menos ocho commits significativos distribuidos en tres días diferentes, mensajes descriptivos y participación de todos los integrantes. El historial de esta rama muestra actividad progresiva en septiembre, octubre y noviembre de 2026.
+
+## Alcance y estado de entrega
+
+Este README documenta los archivos que actualmente están versionados en la rama `Proyecto`. No declara como completados entregables que todavía no aparecen en el árbol del repositorio. Antes de la entrega final se debe:
+
+1. Incorporar los ejercicios 5 y 6 si el equipo es de tres integrantes.
+2. Confirmar que cada PDF del avance 2 incluya tablas de variables, diagramas completos, código, casos de prueba y capturas legibles.
+3. Sustituir los marcadores de integrantes en los encabezados de los ejercicios 7 y 8 por los nombres reales del equipo.
+4. Indicar esta rama (`Proyecto`) en la portada del PDF que se subirá a Moodle.
