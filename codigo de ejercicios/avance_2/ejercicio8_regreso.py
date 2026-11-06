@@ -63,7 +63,7 @@ if combustibleDisponible >= combustibleNecesario:
             if provisionesDisponibles < tripulantes * CONSUMO_PROVISIONES_TRIPULANTE:
                 print("Recurso insuficiente: provisiones")
 
-            # Cambiar la variable de control para terminar el ciclo sin break
+            # Actualizar la variable de control para que la condición del ciclo sea falsa
             continuarRegreso = False
 
     # Resultados del regreso
