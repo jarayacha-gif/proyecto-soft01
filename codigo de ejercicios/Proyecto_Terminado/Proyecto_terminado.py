@@ -440,12 +440,13 @@ def ordenar_bitacora(bitacora):
 
 def mostrar_reporte(mision, bitacora):
     """Muestra el resultado de la mision y su bitacora ordenada."""
-    print("""=== REPORTE FINAL ===
+    print(f"""=== REPORTE FINAL ===
     Misión: {mision[MIS_NOMBRE]}
     Destino: {mision[MIS_DESTINO]}
     Resultado: {mision[MIS_RESULTADO]}
-    Puntos científicos: {mision[MIS_PUNTOS]}
-    print("Bitácora de exploración (de mayor a menor puntaje):""")
+    Puntos científicos: {mision[MIS_PUNTOS]}""")
+
+    print("Bitácora de exploración (de mayor a menor puntaje):")
 
     # Si no hubo exploración, se informa y se evita intentar ordenar una lista vacía.
     if len(bitacora) == 0:
