@@ -134,6 +134,10 @@ python "codigo de ejercicios/avance_1/ejercicio1Proyecto.py"
 python "codigo de ejercicios/avance_2/ejercicio7_exploracion.py"
 ```
 
+## Corrección del reporte final
+
+La salida del reporte de cada misión muestra ahora correctamente el nombre, el destino, el resultado y los puntos científicos mediante interpolación de cadenas. El encabezado de la bitácora se presenta en una línea independiente.
+
 ## Uso general del sistema final
 
 Al iniciar, se presenta el menú principal de **Misión Órbita**:
